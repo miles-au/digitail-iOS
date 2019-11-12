@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.2)
+  - QRCode (2.0)
+  - SwiftReorder (7.2.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - QRCode
+  - SwiftReorder (~> 7.2)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - QRCode
+    - SwiftReorder
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c75366f1f19590e8caeae45fcd5815c9289d6099
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
+  SwiftReorder: d687883abf5f2327268e006b038025a6fc515e34
+
+PODFILE CHECKSUM: 6c22a50e0a4f48c1db9e22a42116db4fcccd5e0f
+
+COCOAPODS: 1.8.4

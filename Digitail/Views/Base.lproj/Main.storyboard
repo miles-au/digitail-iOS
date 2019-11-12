@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sRd-zo-gB0">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+        <array key="Quicksand-SemiBold.ttf">
+            <string>Quicksand-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Digitail-->
+        <scene sceneID="w8e-xh-5pr">
+            <objects>
+                <tableViewController id="27n-46-ckm" customClass="QRListViewController" customModule="Digitail" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aJz-4A-v81">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                        <color key="sectionIndexBackgroundColor" name="BrandBlue"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QRBlockViewCell" id="xGW-Nz-9x9">
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGW-Nz-9x9" id="rFQ-XD-zFA">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="27n-46-ckm" id="n8T-bE-vQT"/>
+                            <outlet property="delegate" destination="27n-46-ckm" id="eRW-am-L0U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Digitail" id="WsE-9k-G6e">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="shuffle" catalog="system" id="LjY-kP-c8f">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="ReorderButtonPressed:" destination="27n-46-ckm" id="82q-tj-Ny5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RBW-wT-dXK">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="bjp-QA-Fco" kind="show" id="ntD-iE-2F1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ShuffleButton" destination="LjY-kP-c8f" id="fn9-B6-rzQ"/>
+                        <outlet property="addQRBlockButton" destination="RBW-wT-dXK" id="3Lb-ar-eXb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1n-mn-gNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779.7101449275365" y="97.767857142857139"/>
+        </scene>
+        <!--AddQR View Controller-->
+        <scene sceneID="Wxm-dY-wm5">
+            <objects>
+                <viewController id="bjp-QA-Fco" customClass="AddQRViewController" customModule="Digitail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3XL-4Z-bkR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platform:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zk7-Ib-lNz">
+                                <rect key="frame" x="10" y="10" width="125.5" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8mE-Ba-9fF" userLabel="PlatformIconsStackView">
+                                <rect key="frame" x="10" y="57.5" width="300" height="145"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-27-TdK">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgu-rn-HKT">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kgu-rn-HKT" secondAttribute="height" multiplier="1:1" id="gTT-xx-bJS"/>
+                                                </constraints>
+                                                <state key="normal" image="Telephone"/>
+                                                <connections>
+                                                    <action selector="NewQRTelephonePressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="Bkd-6T-Glc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xze-Dn-UjO">
+                                                <rect key="frame" x="77.5" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Xze-Dn-UjO" secondAttribute="height" multiplier="1:1" id="Rov-O3-D4F"/>
+                                                </constraints>
+                                                <state key="normal" image="Email"/>
+                                                <connections>
+                                                    <action selector="NewQREmailPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="u9Q-Tx-Fbc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAk-ZP-YFl">
+                                                <rect key="frame" x="155" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cAk-ZP-YFl" secondAttribute="height" multiplier="1:1" id="qTH-eG-5mV"/>
+                                                </constraints>
+                                                <state key="normal" image="Website"/>
+                                                <connections>
+                                                    <action selector="NewQRWebsitePressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="58J-6Z-W3P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDa-AH-Sfc">
+                                                <rect key="frame" x="232.5" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZDa-AH-Sfc" secondAttribute="height" multiplier="1:1" id="QTV-dy-KiO"/>
+                                                </constraints>
+                                                <state key="normal" image="Facebook"/>
+                                                <connections>
+                                                    <action selector="NewQRFacebookPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="8uq-uF-BXd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QpZ-LN-atZ">
+                                        <rect key="frame" x="0.0" y="77.5" width="300" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctl-wG-pRn">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ctl-wG-pRn" secondAttribute="height" multiplier="1:1" id="jPq-qU-COP"/>
+                                                </constraints>
+                                                <state key="normal" image="Instagram"/>
+                                                <connections>
+                                                    <action selector="NewQRInstagramPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="YIg-t1-gHz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-30-RHV">
+                                                <rect key="frame" x="77.5" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MBT-30-RHV" secondAttribute="height" multiplier="1:1" id="FUW-3U-aiu"/>
+                                                </constraints>
+                                                <state key="normal" image="LinkedIn"/>
+                                                <connections>
+                                                    <action selector="NewQRLinkedInPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="Xvi-3h-uHB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-Za-QC5">
+                                                <rect key="frame" x="155" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Hgc-Za-QC5" secondAttribute="height" multiplier="1:1" id="fKu-Au-CaM"/>
+                                                </constraints>
+                                                <state key="normal" image="Twitter"/>
+                                                <connections>
+                                                    <action selector="NewQRTwitterPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="fBW-Xs-itB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LR2-Cb-f99">
+                                                <rect key="frame" x="232.5" y="0.0" width="67.5" height="67.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LR2-Cb-f99" secondAttribute="height" multiplier="1:1" id="2yR-La-j4r"/>
+                                                </constraints>
+                                                <state key="normal" image="GitHub"/>
+                                                <connections>
+                                                    <action selector="NewQRGitHubPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="b4g-Qx-npO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target/URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulx-16-vSb">
+                                <rect key="frame" x="10" y="212.5" width="168" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-J9-6rx">
+                                <rect key="frame" x="10" y="260" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dOt-hv-ZHm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="NewQRTextFieldPrimaryActionPressed:" destination="bjp-QA-Fco" eventType="primaryActionTriggered" id="ucV-QO-Bd8"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-oa-H0e">
+                                <rect key="frame" x="10" y="310" width="300" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h9f-CE-cXw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="30"/>
+                                <state key="normal" title="Add QR Code">
+                                    <color key="titleColor" name="BrandBlue"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddQRPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="ImA-ta-mpI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="BrandLightBlue"/>
+                        <constraints>
+                            <constraint firstItem="8mE-Ba-9fF" firstAttribute="width" secondItem="Sq4-d9-QMO" secondAttribute="width" constant="-20" id="4m1-TN-40I"/>
+                            <constraint firstItem="8xb-J9-6rx" firstAttribute="width" secondItem="8mE-Ba-9fF" secondAttribute="width" id="5cy-wv-VNo"/>
+                            <constraint firstItem="8xb-J9-6rx" firstAttribute="top" secondItem="Ulx-16-vSb" secondAttribute="bottom" constant="10" id="9Zm-PI-dN1"/>
+                            <constraint firstItem="zk7-Ib-lNz" firstAttribute="top" secondItem="Sq4-d9-QMO" secondAttribute="top" constant="10" id="Tqz-77-90K"/>
+                            <constraint firstItem="Oyp-oa-H0e" firstAttribute="top" secondItem="8xb-J9-6rx" secondAttribute="bottom" constant="10" id="XCX-Zy-ZBO"/>
+                            <constraint firstItem="8xb-J9-6rx" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="YvC-5K-Vnb"/>
+                            <constraint firstItem="8mE-Ba-9fF" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="bp1-gk-son"/>
+                            <constraint firstItem="Ulx-16-vSb" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="dFS-dM-Lwg"/>
+                            <constraint firstItem="8mE-Ba-9fF" firstAttribute="top" secondItem="zk7-Ib-lNz" secondAttribute="bottom" constant="10" id="eKU-YS-0UE"/>
+                            <constraint firstItem="zk7-Ib-lNz" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="jdg-Bv-LbQ"/>
+                            <constraint firstItem="Oyp-oa-H0e" firstAttribute="width" secondItem="8xb-J9-6rx" secondAttribute="width" id="pBv-ye-aG1"/>
+                            <constraint firstItem="Oyp-oa-H0e" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="tR8-iy-8F0"/>
+                            <constraint firstItem="Ulx-16-vSb" firstAttribute="top" secondItem="8mE-Ba-9fF" secondAttribute="bottom" constant="10" id="zqM-e7-0Cb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sq4-d9-QMO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PEO-Sj-6gq"/>
+                    <connections>
+                        <outlet property="NewQRUrlTextField" destination="8xb-J9-6rx" id="8mJ-eS-9e7"/>
+                        <outlet property="NewQRUrlTextFieldLabelView" destination="Ulx-16-vSb" id="02m-RC-dfl"/>
+                        <outlet property="PlatformLabel" destination="zk7-Ib-lNz" id="INP-fx-oth"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="MBT-30-RHV" collectionClass="NSMutableArray" id="1TK-hL-L3Z"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="Xze-Dn-UjO" collectionClass="NSMutableArray" id="vLJ-cp-evC"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="ZDa-AH-Sfc" collectionClass="NSMutableArray" id="lS5-wU-fhs"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="Ctl-wG-pRn" collectionClass="NSMutableArray" id="cgG-mX-ylb"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="kgu-rn-HKT" collectionClass="NSMutableArray" id="pZq-Bw-FNC"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="Hgc-Za-QC5" collectionClass="NSMutableArray" id="u87-Hd-9IS"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="LR2-Cb-f99" collectionClass="NSMutableArray" id="pLh-Lt-0KA"/>
+                        <outletCollection property="NewQRPlatformCollection" destination="cAk-ZP-YFl" collectionClass="NSMutableArray" id="LZR-RX-Yqb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1nb-Yv-1vG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711.25" y="97.183098591549296"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ztw-FU-m7c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sRd-zo-gB0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="e0Q-jG-G7t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="BrandBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="27n-46-ckm" kind="relationship" relationship="rootViewController" id="bDF-R8-uvb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFq-EM-vmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Email" width="250" height="250"/>
+        <image name="Facebook" width="250" height="250"/>
+        <image name="GitHub" width="250" height="250"/>
+        <image name="Instagram" width="250" height="250"/>
+        <image name="LinkedIn" width="250" height="250"/>
+        <image name="Telephone" width="250" height="250"/>
+        <image name="Twitter" width="250" height="250"/>
+        <image name="Website" width="250" height="250"/>
+        <image name="shuffle" catalog="system" width="64" height="46"/>
+        <namedColor name="BrandBlue">
+            <color red="0.10588235294117647" green="0.16470588235294117" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLightBlue">
+            <color red="0.27500000596046448" green="0.3449999988079071" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_Digitail {
+  umbrella header "Pods-Digitail-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07CC970D2378A2CD0057D2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC970C2378A2CD0057D2E5 /* AppDelegate.swift */; };
+		07CC970F2378A2CD0057D2E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC970E2378A2CD0057D2E5 /* SceneDelegate.swift */; };
+		07CC97142378A2CD0057D2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97122378A2CD0057D2E5 /* Main.storyboard */; };
+		07CC97162378A2D10057D2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97152378A2D10057D2E5 /* Assets.xcassets */; };
+		07CC97192378A2D10057D2E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97172378A2D10057D2E5 /* LaunchScreen.storyboard */; };
+		07CC97242378A7F80057D2E5 /* QRListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC97232378A7F80057D2E5 /* QRListViewController.swift */; };
+		07CC972D2378AC9E0057D2E5 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97282378AC9E0057D2E5 /* Quicksand-Bold.ttf */; };
+		07CC972E2378AC9E0057D2E5 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97292378AC9E0057D2E5 /* Quicksand-Medium.ttf */; };
+		07CC972F2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC972A2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf */; };
+		07CC97302378AC9E0057D2E5 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC972B2378AC9E0057D2E5 /* Quicksand-Regular.ttf */; };
+		07CC97312378AC9E0057D2E5 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC972C2378AC9E0057D2E5 /* Quicksand-Light.ttf */; };
+		07CC97382378B27E0057D2E5 /* QRBlockViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC97362378B27E0057D2E5 /* QRBlockViewCell.swift */; };
+		07CC97392378B27E0057D2E5 /* QRBlockViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97372378B27E0057D2E5 /* QRBlockViewCell.xib */; };
+		07CC973D2378DC6A0057D2E5 /* AddQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC973C2378DC6A0057D2E5 /* AddQRViewController.swift */; };
+		07CC97432378FA760057D2E5 /* QRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC97422378FA750057D2E5 /* QRBlock.swift */; };
+		C026EE811402E8C578818066 /* Pods_Digitail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07CC97092378A2CD0057D2E5 /* Digitail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CC970C2378A2CD0057D2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07CC970E2378A2CD0057D2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		07CC97132378A2CD0057D2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07CC97152378A2D10057D2E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07CC97182378A2D10057D2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07CC971A2378A2D10057D2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07CC97232378A7F80057D2E5 /* QRListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRListViewController.swift; sourceTree = "<group>"; };
+		07CC97282378AC9E0057D2E5 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		07CC97292378AC9E0057D2E5 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		07CC972A2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		07CC972B2378AC9E0057D2E5 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		07CC972C2378AC9E0057D2E5 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		07CC97362378B27E0057D2E5 /* QRBlockViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRBlockViewCell.swift; sourceTree = "<group>"; };
+		07CC97372378B27E0057D2E5 /* QRBlockViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRBlockViewCell.xib; sourceTree = "<group>"; };
+		07CC973C2378DC6A0057D2E5 /* AddQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQRViewController.swift; sourceTree = "<group>"; };
+		07CC97422378FA750057D2E5 /* QRBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRBlock.swift; sourceTree = "<group>"; };
+		B23641D35F0722C25C6F7D98 /* Pods-Digitail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitail.release.xcconfig"; path = "Target Support Files/Pods-Digitail/Pods-Digitail.release.xcconfig"; sourceTree = "<group>"; };
+		C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digitail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F881043A12A90097F08AE844 /* Pods-Digitail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitail.debug.xcconfig"; path = "Target Support Files/Pods-Digitail/Pods-Digitail.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07CC97062378A2CD0057D2E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C026EE811402E8C578818066 /* Pods_Digitail.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07CC97002378A2CC0057D2E5 = {
+			isa = PBXGroup;
+			children = (
+				07CC970B2378A2CD0057D2E5 /* Digitail */,
+				07CC970A2378A2CD0057D2E5 /* Products */,
+				5F60C78FAB9A0F4FB317F016 /* Pods */,
+				7B9EB66CB20256C4FFDA1705 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		07CC970A2378A2CD0057D2E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07CC97092378A2CD0057D2E5 /* Digitail.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07CC970B2378A2CD0057D2E5 /* Digitail */ = {
+			isa = PBXGroup;
+			children = (
+				07CC97332378B0250057D2E5 /* Models */,
+				07CC97322378B00F0057D2E5 /* Views */,
+				07CC97222378A7DD0057D2E5 /* Controllers */,
+				07CC970C2378A2CD0057D2E5 /* AppDelegate.swift */,
+				07CC970E2378A2CD0057D2E5 /* SceneDelegate.swift */,
+				07CC97152378A2D10057D2E5 /* Assets.xcassets */,
+				07CC97172378A2D10057D2E5 /* LaunchScreen.storyboard */,
+				07CC971A2378A2D10057D2E5 /* Info.plist */,
+				07CC97252378AC580057D2E5 /* Fonts */,
+			);
+			path = Digitail;
+			sourceTree = "<group>";
+		};
+		07CC97222378A7DD0057D2E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07CC97232378A7F80057D2E5 /* QRListViewController.swift */,
+				07CC973C2378DC6A0057D2E5 /* AddQRViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		07CC97252378AC580057D2E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				07CC97282378AC9E0057D2E5 /* Quicksand-Bold.ttf */,
+				07CC972C2378AC9E0057D2E5 /* Quicksand-Light.ttf */,
+				07CC97292378AC9E0057D2E5 /* Quicksand-Medium.ttf */,
+				07CC972B2378AC9E0057D2E5 /* Quicksand-Regular.ttf */,
+				07CC972A2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		07CC97322378B00F0057D2E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07CC97122378A2CD0057D2E5 /* Main.storyboard */,
+				07CC97362378B27E0057D2E5 /* QRBlockViewCell.swift */,
+				07CC97372378B27E0057D2E5 /* QRBlockViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07CC97332378B0250057D2E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07CC97422378FA750057D2E5 /* QRBlock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F60C78FAB9A0F4FB317F016 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F881043A12A90097F08AE844 /* Pods-Digitail.debug.xcconfig */,
+				B23641D35F0722C25C6F7D98 /* Pods-Digitail.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7B9EB66CB20256C4FFDA1705 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07CC97082378A2CD0057D2E5 /* Digitail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07CC971D2378A2D10057D2E5 /* Build configuration list for PBXNativeTarget "Digitail" */;
+			buildPhases = (
+				8D7DC435FC41C50A3B04054D /* [CP] Check Pods Manifest.lock */,
+				07CC97052378A2CD0057D2E5 /* Sources */,
+				07CC97062378A2CD0057D2E5 /* Frameworks */,
+				07CC97072378A2CD0057D2E5 /* Resources */,
+				21C43C0CB514B034BDC33052 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Digitail;
+			productName = Digitail;
+			productReference = 07CC97092378A2CD0057D2E5 /* Digitail.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07CC97012378A2CC0057D2E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Miles Au";
+				TargetAttributes = {
+					07CC97082378A2CD0057D2E5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 07CC97042378A2CC0057D2E5 /* Build configuration list for PBXProject "Digitail" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07CC97002378A2CC0057D2E5;
+			productRefGroup = 07CC970A2378A2CD0057D2E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07CC97082378A2CD0057D2E5 /* Digitail */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07CC97072378A2CD0057D2E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CC97192378A2D10057D2E5 /* LaunchScreen.storyboard in Resources */,
+				07CC97162378A2D10057D2E5 /* Assets.xcassets in Resources */,
+				07CC97302378AC9E0057D2E5 /* Quicksand-Regular.ttf in Resources */,
+				07CC97142378A2CD0057D2E5 /* Main.storyboard in Resources */,
+				07CC972F2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf in Resources */,
+				07CC972D2378AC9E0057D2E5 /* Quicksand-Bold.ttf in Resources */,
+				07CC97392378B27E0057D2E5 /* QRBlockViewCell.xib in Resources */,
+				07CC972E2378AC9E0057D2E5 /* Quicksand-Medium.ttf in Resources */,
+				07CC97312378AC9E0057D2E5 /* Quicksand-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21C43C0CB514B034BDC33052 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Digitail/Pods-Digitail-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Digitail/Pods-Digitail-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Digitail/Pods-Digitail-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D7DC435FC41C50A3B04054D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Digitail-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07CC97052378A2CD0057D2E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CC970D2378A2CD0057D2E5 /* AppDelegate.swift in Sources */,
+				07CC97382378B27E0057D2E5 /* QRBlockViewCell.swift in Sources */,
+				07CC970F2378A2CD0057D2E5 /* SceneDelegate.swift in Sources */,
+				07CC973D2378DC6A0057D2E5 /* AddQRViewController.swift in Sources */,
+				07CC97242378A7F80057D2E5 /* QRListViewController.swift in Sources */,
+				07CC97432378FA760057D2E5 /* QRBlock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07CC97122378A2CD0057D2E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07CC97132378A2CD0057D2E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07CC97172378A2D10057D2E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07CC97182378A2D10057D2E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07CC971B2378A2D10057D2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07CC971C2378A2D10057D2E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07CC971E2378A2D10057D2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F881043A12A90097F08AE844 /* Pods-Digitail.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6X24VA92QA;
+				INFOPLIST_FILE = Digitail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.milesau.Digitail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07CC971F2378A2D10057D2E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B23641D35F0722C25C6F7D98 /* Pods-Digitail.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6X24VA92QA;
+				INFOPLIST_FILE = Digitail/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.milesau.Digitail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07CC97042378A2CC0057D2E5 /* Build configuration list for PBXProject "Digitail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07CC971B2378A2D10057D2E5 /* Debug */,
+				07CC971C2378A2D10057D2E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07CC971D2378A2D10057D2E5 /* Build configuration list for PBXNativeTarget "Digitail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07CC971E2378A2D10057D2E5 /* Debug */,
+				07CC971F2378A2D10057D2E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07CC97012378A2CC0057D2E5 /* Project object */;
+}
