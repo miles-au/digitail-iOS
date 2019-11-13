@@ -11,7 +11,7 @@ import QRCode
 import SwiftReorder
 import SwiftUI
 
-class QRListViewController: UITableViewController {
+class QRListViewController: UIViewController, UITableViewDataSource {
     
     var QRBlockArray = [QRBlock]()
     var isShuffling = false
@@ -19,12 +19,14 @@ class QRListViewController: UITableViewController {
     var QRBlockSizeWithoutQRCode: CGFloat = 90.0
     @IBOutlet weak var ShuffleButton: UIBarButtonItem!
     @IBOutlet weak var addQRBlockButton: UIBarButtonItem!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         QRBlockArray = QRBlock.getOldQRBlocks()
         
         tableView.dataSource = self
+        
         tableView.register(UINib(nibName: "QRBlockViewCell", bundle: nil), forCellReuseIdentifier: "QRBlockViewCell")
         tableView.rowHeight = screenSize.width + QRBlockSizeWithoutQRCode
         tableView.reorder.delegate = self
@@ -46,12 +48,16 @@ class QRListViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return QRBlockArray.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let QRBlockObj = QRBlockArray[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "QRBlockViewCell", for: indexPath) as! QRBlockViewCell
         
@@ -88,13 +94,13 @@ class QRListViewController: UITableViewController {
     //MARK: - Editable TableView
     
     // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
 
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             QRBlockArray.remove(at: indexPath.row)
@@ -120,6 +126,14 @@ class QRListViewController: UITableViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    //MARK: - Link to my website
+    @IBAction func linkToMilesWebsitePressed(_ sender: UIButton) {
+        if let url = URL(string: "https://milesau.com"){
+            UIApplication.shared.open(url)
+        }
+
     }
     
 }
