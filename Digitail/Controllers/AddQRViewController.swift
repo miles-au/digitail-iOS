@@ -14,69 +14,25 @@ protocol DismissAddQRViewControllerDelegate: class {
 
 class AddQRViewController: UIViewController, UIScrollViewDelegate{
     
-    var platformsArray = QRBlock.platforms
+    var platformsIconsArray = NewQRPlatformIcon.platforms
     var delegate: DismissAddQRViewControllerDelegate?
-    
-    @IBOutlet var NewQRPlatformCollection: [UIButton]!
-    
-    
-    @IBAction func NewQRTelephonePressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "Telephone", sender: sender)
-    }
-    @IBAction func NewQREmailPressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "Email", sender: sender)
-    }
-    @IBAction func NewQRWebsitePressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "Website", sender: sender)
-    }
-    @IBAction func NewQRFacebookPressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "Facebook", sender: sender)
-    }
-    @IBAction func NewQRInstagramPressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "Instagram", sender: sender)
-    }
-    @IBAction func NewQRLinkedInPressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "LinkedIn", sender: sender)
-    }
-    @IBAction func NewQRGitHubPressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "GitHub", sender: sender)
-    }
-    @IBAction func NewQRTwitterPressed(_ sender: UIButton) {
-        updatePlatformChoice(with: "Twitter", sender: sender)
-    }
     
     @IBOutlet weak var PlatformLabel: UILabel!
     @IBOutlet weak var NewQRUrlTextField: UITextField!
     @IBOutlet weak var NewQRUrlTextFieldLabelView: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
     var finalPlatform: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: "NewQRPlatformIconsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NewQRPlatformIconCell")
+        layoutCells()
+        collectionView.reloadData()
     }
-    
-    func updatePlatformChoice(with platform: String, sender: UIButton){
-        PlatformLabel.text = "Platform: \(platform)"
-        for platformIcon in NewQRPlatformCollection{
-            platformIcon.layer.borderWidth = 0
-        }
-        
-        switch platform {
-        case "Email":
-            NewQRUrlTextFieldLabelView.text = "Email:"
-        case "Telephone":
-            NewQRUrlTextFieldLabelView.text = "Phone Number:"
-        case "Instagram", "Twitter":
-            NewQRUrlTextFieldLabelView.text = "Handle:"
-        default:
-            NewQRUrlTextFieldLabelView.text = "URL:"
-        }
-        
-        finalPlatform = platform
-        sender.layer.borderWidth = 5
-        sender.layer.borderColor = UIColor.white.cgColor
-    }    
     
     @IBAction func AddQRPressed(_ sender: UIButton) {
         var target = NewQRUrlTextField.text!
@@ -108,7 +64,7 @@ class AddQRViewController: UIViewController, UIScrollViewDelegate{
                 QRBlock.writeNewQRBlocks(with: QRBlockArray)
                 
                 self.delegate?.dismissed()
-//                dismiss(animated: true, completion: nil)
+                //                dismiss(animated: true, completion: nil)
                 navigationController?.popViewController(animated: true)
             } else{
                 let alert = UIAlertController(title: "The url is either invalid or doesn't match the platform", message: "", preferredStyle: .alert)
@@ -160,4 +116,68 @@ class AddQRViewController: UIViewController, UIScrollViewDelegate{
     @IBAction func NewQRTextFieldPrimaryActionPressed(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
+}
+
+
+extension AddQRViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+    
+    // MARK: UICollectionViewDataSource
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return platformsIconsArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewQRPlatformIconCell", for: indexPath)
+        let platformIconCell = cell as! NewQRPlatformIconsCollectionViewCell
+        platformIconCell.NewQrPlatformCellImageView.image = UIImage(named: platformsIconsArray[indexPath.row].platform)
+        
+        return cell
+    }
+    
+    func layoutCells() {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
+        layout.minimumInteritemSpacing = 5.0
+        layout.minimumLineSpacing = 5.0
+        let itemSize = (UIScreen.main.bounds.size.width - 40)/4
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        
+        collectionViewHeightConstraint.constant = UIScreen.main.bounds.size.width / 2
+        collectionView!.collectionViewLayout = layout
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        for platformIcon in collectionView.visibleCells{
+            let platformIconCell = platformIcon as! NewQRPlatformIconsCollectionViewCell
+            platformIconCell.NewQrPlatformCellImageView.layer.borderWidth = 0
+        }
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! NewQRPlatformIconsCollectionViewCell
+        cell.NewQrPlatformCellImageView.layer.borderWidth = 5.0
+        cell.NewQrPlatformCellImageView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        let platform = platformsIconsArray[indexPath.item].platform
+        PlatformLabel.text = "Platform: \(platform)"
+        
+        switch platform {
+        case "Email":
+            NewQRUrlTextFieldLabelView.text = "Email:"
+        case "Telephone":
+            NewQRUrlTextFieldLabelView.text = "Phone Number:"
+        case "Instagram", "Twitter":
+            NewQRUrlTextFieldLabelView.text = "Handle:"
+        default:
+            NewQRUrlTextFieldLabelView.text = "URL:"
+        }
+        finalPlatform = platform
+        
+    }
+    
 }

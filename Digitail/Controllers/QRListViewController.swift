@@ -26,10 +26,9 @@ class QRListViewController: UIViewController, UITableViewDataSource {
         QRBlockArray = QRBlock.getOldQRBlocks()
         
         tableView.dataSource = self
-        
+        tableView.reorder.delegate = self
         tableView.register(UINib(nibName: "QRBlockViewCell", bundle: nil), forCellReuseIdentifier: "QRBlockViewCell")
         tableView.rowHeight = screenSize.width + QRBlockSizeWithoutQRCode
-        tableView.reorder.delegate = self
         tableView.reorder.longPressDuration = 0.2
         tableView.reorder.cellOpacity = 0.4
 

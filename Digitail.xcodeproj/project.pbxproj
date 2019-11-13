@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A38436237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A38434237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift */; };
+		07A38437237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A38435237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib */; };
+		07A38439237BB2990081A85E /* NewQRPlatformIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A38438237BB2990081A85E /* NewQRPlatformIcon.swift */; };
 		07CC970D2378A2CD0057D2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC970C2378A2CD0057D2E5 /* AppDelegate.swift */; };
 		07CC970F2378A2CD0057D2E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC970E2378A2CD0057D2E5 /* SceneDelegate.swift */; };
 		07CC97142378A2CD0057D2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97122378A2CD0057D2E5 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07A38434237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQRPlatformIconsCollectionViewCell.swift; sourceTree = "<group>"; };
+		07A38435237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewQRPlatformIconsCollectionViewCell.xib; sourceTree = "<group>"; };
+		07A38438237BB2990081A85E /* NewQRPlatformIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQRPlatformIcon.swift; sourceTree = "<group>"; };
 		07CC97092378A2CD0057D2E5 /* Digitail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CC970C2378A2CD0057D2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07CC970E2378A2CD0057D2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 				07CC97122378A2CD0057D2E5 /* Main.storyboard */,
 				07CC97362378B27E0057D2E5 /* QRBlockViewCell.swift */,
 				07CC97372378B27E0057D2E5 /* QRBlockViewCell.xib */,
+				07A38434237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift */,
+				07A38435237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				07CC97422378FA750057D2E5 /* QRBlock.swift */,
+				07A38438237BB2990081A85E /* NewQRPlatformIcon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 				07CC97162378A2D10057D2E5 /* Assets.xcassets in Resources */,
 				07CC97302378AC9E0057D2E5 /* Quicksand-Regular.ttf in Resources */,
 				07CC97142378A2CD0057D2E5 /* Main.storyboard in Resources */,
+				07A38437237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib in Resources */,
 				07CC972F2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf in Resources */,
 				07CC972D2378AC9E0057D2E5 /* Quicksand-Bold.ttf in Resources */,
 				07CC97392378B27E0057D2E5 /* QRBlockViewCell.xib in Resources */,
@@ -275,6 +285,8 @@
 				07CC97382378B27E0057D2E5 /* QRBlockViewCell.swift in Sources */,
 				07CC970F2378A2CD0057D2E5 /* SceneDelegate.swift in Sources */,
 				07CC973D2378DC6A0057D2E5 /* AddQRViewController.swift in Sources */,
+				07A38436237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift in Sources */,
+				07A38439237BB2990081A85E /* NewQRPlatformIcon.swift in Sources */,
 				07CC97242378A7F80057D2E5 /* QRListViewController.swift in Sources */,
 				07CC97432378FA760057D2E5 /* QRBlock.swift in Sources */,
 			);

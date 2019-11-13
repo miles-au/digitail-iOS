@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -40,7 +41,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvV-EQ-G7p">
-                                <rect key="frame" x="54" y="482" width="212" height="37"/>
+                                <rect key="frame" x="54.5" y="483" width="211" height="36"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="20"/>
                                 <state key="normal" title="Made in 🇨🇦 by Miles Au"/>
                                 <connections>
@@ -92,122 +93,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platform:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zk7-Ib-lNz">
-                                <rect key="frame" x="10" y="10" width="125.5" height="37.5"/>
+                                <rect key="frame" x="10" y="10" width="122" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8mE-Ba-9fF" userLabel="PlatformIconsStackView">
-                                <rect key="frame" x="10" y="57.5" width="300" height="145"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-27-TdK">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="67.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgu-rn-HKT">
-                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="kgu-rn-HKT" secondAttribute="height" multiplier="1:1" id="gTT-xx-bJS"/>
-                                                </constraints>
-                                                <state key="normal" image="Telephone"/>
-                                                <connections>
-                                                    <action selector="NewQRTelephonePressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="Bkd-6T-Glc"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xze-Dn-UjO">
-                                                <rect key="frame" x="77.5" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Xze-Dn-UjO" secondAttribute="height" multiplier="1:1" id="Rov-O3-D4F"/>
-                                                </constraints>
-                                                <state key="normal" image="Email"/>
-                                                <connections>
-                                                    <action selector="NewQREmailPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="u9Q-Tx-Fbc"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAk-ZP-YFl">
-                                                <rect key="frame" x="155" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="cAk-ZP-YFl" secondAttribute="height" multiplier="1:1" id="qTH-eG-5mV"/>
-                                                </constraints>
-                                                <state key="normal" image="Website"/>
-                                                <connections>
-                                                    <action selector="NewQRWebsitePressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="58J-6Z-W3P"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDa-AH-Sfc">
-                                                <rect key="frame" x="232.5" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ZDa-AH-Sfc" secondAttribute="height" multiplier="1:1" id="QTV-dy-KiO"/>
-                                                </constraints>
-                                                <state key="normal" image="Facebook"/>
-                                                <connections>
-                                                    <action selector="NewQRFacebookPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="8uq-uF-BXd"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QpZ-LN-atZ">
-                                        <rect key="frame" x="0.0" y="77.5" width="300" height="67.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctl-wG-pRn">
-                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Ctl-wG-pRn" secondAttribute="height" multiplier="1:1" id="jPq-qU-COP"/>
-                                                </constraints>
-                                                <state key="normal" image="Instagram"/>
-                                                <connections>
-                                                    <action selector="NewQRInstagramPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="YIg-t1-gHz"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-30-RHV">
-                                                <rect key="frame" x="77.5" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="MBT-30-RHV" secondAttribute="height" multiplier="1:1" id="FUW-3U-aiu"/>
-                                                </constraints>
-                                                <state key="normal" image="LinkedIn"/>
-                                                <connections>
-                                                    <action selector="NewQRLinkedInPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="Xvi-3h-uHB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-Za-QC5">
-                                                <rect key="frame" x="155" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Hgc-Za-QC5" secondAttribute="height" multiplier="1:1" id="fKu-Au-CaM"/>
-                                                </constraints>
-                                                <state key="normal" image="Twitter"/>
-                                                <connections>
-                                                    <action selector="NewQRTwitterPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="fBW-Xs-itB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LR2-Cb-f99">
-                                                <rect key="frame" x="232.5" y="0.0" width="67.5" height="67.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="LR2-Cb-f99" secondAttribute="height" multiplier="1:1" id="2yR-La-j4r"/>
-                                                </constraints>
-                                                <state key="normal" image="GitHub"/>
-                                                <connections>
-                                                    <action selector="NewQRGitHubPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="b4g-Qx-npO"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-fi-dQl">
+                                <rect key="frame" x="0.0" y="55" width="320" height="175"/>
+                                <color key="backgroundColor" name="BrandLightBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="JBc-3L-HbK"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vhp-Ds-rXt">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewQRPlatformIconCell" id="Fnv-x3-he9">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="d2f-Qn-FCb">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target/URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulx-16-vSb">
-                                <rect key="frame" x="10" y="212.5" width="168" height="37.5"/>
+                                <rect key="frame" x="10" y="240" width="159.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-J9-6rx">
-                                <rect key="frame" x="10" y="260" width="300" height="40"/>
+                                <rect key="frame" x="10" y="285" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dOt-hv-ZHm"/>
                                 </constraints>
@@ -218,7 +139,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-oa-H0e">
-                                <rect key="frame" x="10" y="310" width="300" height="50"/>
+                                <rect key="frame" x="10" y="335" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h9f-CE-cXw"/>
@@ -234,19 +155,19 @@
                         </subviews>
                         <color key="backgroundColor" name="BrandLightBlue"/>
                         <constraints>
-                            <constraint firstItem="8mE-Ba-9fF" firstAttribute="width" secondItem="Sq4-d9-QMO" secondAttribute="width" constant="-20" id="4m1-TN-40I"/>
-                            <constraint firstItem="8xb-J9-6rx" firstAttribute="width" secondItem="8mE-Ba-9fF" secondAttribute="width" id="5cy-wv-VNo"/>
                             <constraint firstItem="8xb-J9-6rx" firstAttribute="top" secondItem="Ulx-16-vSb" secondAttribute="bottom" constant="10" id="9Zm-PI-dN1"/>
+                            <constraint firstItem="8xb-J9-6rx" firstAttribute="width" secondItem="8PL-fi-dQl" secondAttribute="width" constant="-20" id="Ftg-xU-RKE"/>
+                            <constraint firstItem="8PL-fi-dQl" firstAttribute="top" secondItem="zk7-Ib-lNz" secondAttribute="bottom" constant="10" id="L1e-wa-MIF"/>
                             <constraint firstItem="zk7-Ib-lNz" firstAttribute="top" secondItem="Sq4-d9-QMO" secondAttribute="top" constant="10" id="Tqz-77-90K"/>
                             <constraint firstItem="Oyp-oa-H0e" firstAttribute="top" secondItem="8xb-J9-6rx" secondAttribute="bottom" constant="10" id="XCX-Zy-ZBO"/>
+                            <constraint firstItem="8PL-fi-dQl" firstAttribute="leading" secondItem="3XL-4Z-bkR" secondAttribute="leading" id="XRl-Nf-C9k"/>
                             <constraint firstItem="8xb-J9-6rx" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="YvC-5K-Vnb"/>
-                            <constraint firstItem="8mE-Ba-9fF" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="bp1-gk-son"/>
+                            <constraint firstItem="Ulx-16-vSb" firstAttribute="top" secondItem="8PL-fi-dQl" secondAttribute="bottom" constant="10" id="a3E-Vu-xtj"/>
                             <constraint firstItem="Ulx-16-vSb" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="dFS-dM-Lwg"/>
-                            <constraint firstItem="8mE-Ba-9fF" firstAttribute="top" secondItem="zk7-Ib-lNz" secondAttribute="bottom" constant="10" id="eKU-YS-0UE"/>
                             <constraint firstItem="zk7-Ib-lNz" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="jdg-Bv-LbQ"/>
+                            <constraint firstItem="8PL-fi-dQl" firstAttribute="width" secondItem="Sq4-d9-QMO" secondAttribute="width" id="oll-it-Neu"/>
                             <constraint firstItem="Oyp-oa-H0e" firstAttribute="width" secondItem="8xb-J9-6rx" secondAttribute="width" id="pBv-ye-aG1"/>
                             <constraint firstItem="Oyp-oa-H0e" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="tR8-iy-8F0"/>
-                            <constraint firstItem="Ulx-16-vSb" firstAttribute="top" secondItem="8mE-Ba-9fF" secondAttribute="bottom" constant="10" id="zqM-e7-0Cb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sq4-d9-QMO"/>
                     </view>
@@ -255,19 +176,13 @@
                         <outlet property="NewQRUrlTextField" destination="8xb-J9-6rx" id="8mJ-eS-9e7"/>
                         <outlet property="NewQRUrlTextFieldLabelView" destination="Ulx-16-vSb" id="02m-RC-dfl"/>
                         <outlet property="PlatformLabel" destination="zk7-Ib-lNz" id="INP-fx-oth"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="MBT-30-RHV" collectionClass="NSMutableArray" id="1TK-hL-L3Z"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="Xze-Dn-UjO" collectionClass="NSMutableArray" id="vLJ-cp-evC"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="ZDa-AH-Sfc" collectionClass="NSMutableArray" id="lS5-wU-fhs"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="Ctl-wG-pRn" collectionClass="NSMutableArray" id="cgG-mX-ylb"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="kgu-rn-HKT" collectionClass="NSMutableArray" id="pZq-Bw-FNC"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="Hgc-Za-QC5" collectionClass="NSMutableArray" id="u87-Hd-9IS"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="LR2-Cb-f99" collectionClass="NSMutableArray" id="pLh-Lt-0KA"/>
-                        <outletCollection property="NewQRPlatformCollection" destination="cAk-ZP-YFl" collectionClass="NSMutableArray" id="LZR-RX-Yqb"/>
+                        <outlet property="collectionView" destination="8PL-fi-dQl" id="TF8-lJ-0Lo"/>
+                        <outlet property="collectionViewHeightConstraint" destination="JBc-3L-HbK" id="eJD-l9-rdN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nb-Yv-1vG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2728" y="-686"/>
+            <point key="canvasLocation" x="2726.25" y="-686.61971830985919"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b3g-vy-RJG">
@@ -295,17 +210,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Email" width="250" height="250"/>
-        <image name="Facebook" width="250" height="250"/>
-        <image name="GitHub" width="250" height="250"/>
-        <image name="Instagram" width="250" height="250"/>
-        <image name="LinkedIn" width="250" height="250"/>
-        <image name="Telephone" width="250" height="250"/>
-        <image name="Twitter" width="250" height="250"/>
-        <image name="Website" width="250" height="250"/>
         <image name="shuffle" catalog="system" width="64" height="46"/>
         <namedColor name="BrandBlue">
-            <color red="0.10588235294117647" green="0.16470588235294117" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10599999874830246" green="0.16500000655651093" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.27500000596046448" green="0.3449999988079071" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

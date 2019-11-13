@@ -15,7 +15,6 @@ struct QRBlock: Codable{
     
     // Users/milesau/Library/Developer/CoreSimulator/Devices/8F169948-66A3-4C81-B44D-93B96B17E183/data/Containers/Data/Application/D5230662-D8EA-44EE-8CBB-F08E7C292FC4/Documents
     static let pListPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("qrblocks.plist")
-    static let platforms: [String] = ["Telephone", "Email", "Website", "Facebook", "Instagram", "LinkedIn", "GitHub", "Twitter"]
 }
 
 //MARK: - Retrieving and writing from PList File
