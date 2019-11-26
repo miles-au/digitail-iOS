@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Digitail-->
+        <!--Digitails-->
         <scene sceneID="K1z-ro-v9O">
             <objects>
                 <viewController id="JgT-Fy-F42" customClass="QRListViewController" customModule="Digitail" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvV-EQ-G7p">
-                                <rect key="frame" x="54.5" y="483" width="211" height="36"/>
+                                <rect key="frame" x="54" y="482" width="212" height="37"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="20"/>
                                 <state key="normal" title="Made in 🇨🇦 by Miles Au"/>
                                 <connections>
@@ -60,7 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dgp-ea-lgL"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Digitail" id="89Q-hf-Ery">
+                    <navigationItem key="navigationItem" title="Digitails" id="89Q-hf-Ery">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="shuffle" catalog="system" id="LjY-kP-c8f">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -93,13 +93,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platform:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zk7-Ib-lNz">
-                                <rect key="frame" x="10" y="10" width="122" height="35"/>
+                                <rect key="frame" x="10" y="10" width="125.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-fi-dQl">
-                                <rect key="frame" x="0.0" y="55" width="320" height="175"/>
+                                <rect key="frame" x="0.0" y="57.5" width="320" height="175"/>
                                 <color key="backgroundColor" name="BrandLightBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="JBc-3L-HbK"/>
@@ -122,13 +122,13 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target/URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulx-16-vSb">
-                                <rect key="frame" x="10" y="240" width="159.5" height="35"/>
+                                <rect key="frame" x="10" y="242.5" width="168" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-J9-6rx">
-                                <rect key="frame" x="10" y="285" width="300" height="40"/>
+                                <rect key="frame" x="10" y="290" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dOt-hv-ZHm"/>
                                 </constraints>
@@ -139,7 +139,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-oa-H0e">
-                                <rect key="frame" x="10" y="335" width="300" height="50"/>
+                                <rect key="frame" x="10" y="340" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h9f-CE-cXw"/>
