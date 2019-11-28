@@ -21,10 +21,10 @@
 		07CC972F2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC972A2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf */; };
 		07CC97302378AC9E0057D2E5 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC972B2378AC9E0057D2E5 /* Quicksand-Regular.ttf */; };
 		07CC97312378AC9E0057D2E5 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07CC972C2378AC9E0057D2E5 /* Quicksand-Light.ttf */; };
-		07CC97382378B27E0057D2E5 /* QRBlockViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC97362378B27E0057D2E5 /* QRBlockViewCell.swift */; };
-		07CC97392378B27E0057D2E5 /* QRBlockViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CC97372378B27E0057D2E5 /* QRBlockViewCell.xib */; };
 		07CC973D2378DC6A0057D2E5 /* AddQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC973C2378DC6A0057D2E5 /* AddQRViewController.swift */; };
 		07CC97432378FA760057D2E5 /* QRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC97422378FA750057D2E5 /* QRBlock.swift */; };
+		07FBEF65238E2538003C2C1B /* QRBlockViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FBEF63238E2538003C2C1B /* QRBlockViewCell.swift */; };
+		07FBEF66238E2538003C2C1B /* QRBlockViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07FBEF64238E2538003C2C1B /* QRBlockViewCell.xib */; };
 		C026EE811402E8C578818066 /* Pods_Digitail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,10 +45,10 @@
 		07CC972A2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 		07CC972B2378AC9E0057D2E5 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		07CC972C2378AC9E0057D2E5 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
-		07CC97362378B27E0057D2E5 /* QRBlockViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRBlockViewCell.swift; sourceTree = "<group>"; };
-		07CC97372378B27E0057D2E5 /* QRBlockViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRBlockViewCell.xib; sourceTree = "<group>"; };
 		07CC973C2378DC6A0057D2E5 /* AddQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQRViewController.swift; sourceTree = "<group>"; };
 		07CC97422378FA750057D2E5 /* QRBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRBlock.swift; sourceTree = "<group>"; };
+		07FBEF63238E2538003C2C1B /* QRBlockViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRBlockViewCell.swift; sourceTree = "<group>"; };
+		07FBEF64238E2538003C2C1B /* QRBlockViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRBlockViewCell.xib; sourceTree = "<group>"; };
 		B23641D35F0722C25C6F7D98 /* Pods-Digitail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitail.release.xcconfig"; path = "Target Support Files/Pods-Digitail/Pods-Digitail.release.xcconfig"; sourceTree = "<group>"; };
 		C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digitail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F881043A12A90097F08AE844 /* Pods-Digitail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitail.debug.xcconfig"; path = "Target Support Files/Pods-Digitail/Pods-Digitail.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				07CC97122378A2CD0057D2E5 /* Main.storyboard */,
-				07CC97362378B27E0057D2E5 /* QRBlockViewCell.swift */,
-				07CC97372378B27E0057D2E5 /* QRBlockViewCell.xib */,
+				07FBEF63238E2538003C2C1B /* QRBlockViewCell.swift */,
+				07FBEF64238E2538003C2C1B /* QRBlockViewCell.xib */,
 				07A38434237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift */,
 				07A38435237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib */,
 			);
@@ -221,12 +221,12 @@
 			files = (
 				07CC97192378A2D10057D2E5 /* LaunchScreen.storyboard in Resources */,
 				07CC97162378A2D10057D2E5 /* Assets.xcassets in Resources */,
+				07FBEF66238E2538003C2C1B /* QRBlockViewCell.xib in Resources */,
 				07CC97302378AC9E0057D2E5 /* Quicksand-Regular.ttf in Resources */,
 				07CC97142378A2CD0057D2E5 /* Main.storyboard in Resources */,
 				07A38437237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib in Resources */,
 				07CC972F2378AC9E0057D2E5 /* Quicksand-SemiBold.ttf in Resources */,
 				07CC972D2378AC9E0057D2E5 /* Quicksand-Bold.ttf in Resources */,
-				07CC97392378B27E0057D2E5 /* QRBlockViewCell.xib in Resources */,
 				07CC972E2378AC9E0057D2E5 /* Quicksand-Medium.ttf in Resources */,
 				07CC97312378AC9E0057D2E5 /* Quicksand-Light.ttf in Resources */,
 			);
@@ -282,7 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07CC970D2378A2CD0057D2E5 /* AppDelegate.swift in Sources */,
-				07CC97382378B27E0057D2E5 /* QRBlockViewCell.swift in Sources */,
+				07FBEF65238E2538003C2C1B /* QRBlockViewCell.swift in Sources */,
 				07CC970F2378A2CD0057D2E5 /* SceneDelegate.swift in Sources */,
 				07CC973D2378DC6A0057D2E5 /* AddQRViewController.swift in Sources */,
 				07A38436237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift in Sources */,
@@ -443,7 +443,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.milesau.Digitail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -462,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.milesau.Digitail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

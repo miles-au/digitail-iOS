@@ -11,27 +11,37 @@ import QRCode
 import SwiftReorder
 import SwiftUI
 
-class QRListViewController: UIViewController, UITableViewDataSource {
+class QRListViewController: UIViewController {
     
     var QRBlockArray = [QRBlock]()
     var isShuffling = false
     let screenSize: CGRect = UIScreen.main.bounds
     var QRBlockSizeWithoutQRCode: CGFloat = 90.0
+    let layout = UICollectionViewFlowLayout()
+    var qrSquareSize: CGFloat = 0.0
+    
     @IBOutlet weak var ShuffleButton: UIBarButtonItem!
     @IBOutlet weak var addQRBlockButton: UIBarButtonItem!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
+        collectionView.addGestureRecognizer(longPressGesture)
+        collectionView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         QRBlockArray = QRBlock.getOldQRBlocks()
         
-        tableView.dataSource = self
-        tableView.reorder.delegate = self
-        tableView.register(UINib(nibName: "QRBlockViewCell", bundle: nil), forCellReuseIdentifier: "QRBlockViewCell")
-        tableView.rowHeight = screenSize.width + QRBlockSizeWithoutQRCode
-        tableView.reorder.longPressDuration = 0.2
-        tableView.reorder.cellOpacity = 0.4
-
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.dragInteractionEnabled = false
+        collectionView.reorderingCadence = .immediate
+        collectionView.register(UINib(nibName: "QRBlockViewCell", bundle: .none), forCellWithReuseIdentifier: "QRBlockViewCell")
+        
+        setupCells()
+        layoutCells()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,26 +54,63 @@ class QRListViewController: UIViewController, UITableViewDataSource {
             navigationItem.backBarButtonItem = backItem
         }
     }
-
-    // MARK: - Table view data source
-
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return QRBlockArray.count
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        setupCells()
+        layoutCells()
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let QRBlockObj = QRBlockArray[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QRBlockViewCell", for: indexPath) as! QRBlockViewCell
-        
-        if let spacer = tableView.reorder.spacerCell(for: indexPath) {
-            return spacer
+    //MARK: - Rearrangeable collection view
+    @IBAction func ReorderButtonPressed(_ sender: UIBarButtonItem) {
+        isShuffling = !isShuffling
+        if isShuffling{
+            addQRBlockButton.isEnabled = false
+            collectionView.dragInteractionEnabled = true
+            ShuffleButton.image = UIImage(systemName: "checkmark")
+            layout.itemSize = CGSize(width: qrSquareSize, height: 70.0)
+        } else {
+            addQRBlockButton.isEnabled = true
+            collectionView.dragInteractionEnabled = false
+            ShuffleButton.image = UIImage(systemName: "shuffle")
+            layout.itemSize = CGSize(width: qrSquareSize, height: qrSquareSize + 100.0)
         }
+        collectionView.reloadData()
+    }
+    
+    //MARK: - Link to my website
+    @IBAction func linkToMilesWebsitePressed(_ sender: UIButton) {
+        if let url = URL(string: "https://milesau.com"){
+            UIApplication.shared.open(url)
+        }
+    }
+    
+}
 
+extension QRListViewController: DismissAddQRViewControllerDelegate{
+    func dismissed() {
+        QRBlockArray = QRBlock.getOldQRBlocks()
+        collectionView.reloadData()
+    }
+}
+
+extension QRListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return QRBlockArray.count
+    }
+    
+    @objc func removeQRBlock(sender: UICollectionViewCell){
+        let index = sender.tag
+        QRBlockArray.remove(at: index)
+        QRBlock.writeNewQRBlocks(with: QRBlockArray)
+        collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let QRBlockObj = QRBlockArray[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QRBlockViewCell", for: indexPath) as! QRBlockViewCell
+        cell.trashButtonView.tag = indexPath.row
+        cell.trashButtonView.addTarget(self, action: #selector(QRListViewController.removeQRBlock(sender:)), for: .touchUpInside)
+        
         // Generate QR Image
         if var qrCode = QRCode(QRBlockObj.url){
             if isShuffling{
@@ -71,6 +118,7 @@ class QRListViewController: UIViewController, UITableViewDataSource {
                 cell.QRBlockSocialIconView.image = UIImage(named: QRBlockObj.platform)
                 cell.handleLabelView.isHidden = true
                 cell.QRCodeImageView.isHidden = true
+                cell.trashButtonView.isHidden = false
             } else {
                 let screenSize: CGRect = UIScreen.main.bounds
                 qrCode.color = CIColor(rgba: "ffffff")
@@ -83,82 +131,56 @@ class QRListViewController: UIViewController, UITableViewDataSource {
                 cell.QRCodeImageView.image = qrCode.image
                 cell.handleLabelView.isHidden = false
                 cell.QRCodeImageView.isHidden = false
+                cell.trashButtonView.isHidden = true
             }
-            
         }
-
         return cell
     }
-
-    //MARK: - Editable TableView
     
-    // Override to support conditional editing of the table view.
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    // Override to support editing the table view.
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            QRBlockArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            QRBlock.writeNewQRBlocks(with: QRBlockArray)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-
-    //MARK: - Rearrangeable table view
-    
-    @IBAction func ReorderButtonPressed(_ sender: UIBarButtonItem) {
-        isShuffling = !isShuffling
-        if isShuffling{
-            addQRBlockButton.isEnabled = false
-            ShuffleButton.image = UIImage(systemName: "checkmark")
-            tableView.rowHeight = QRBlockSizeWithoutQRCode
-        } else {
-            addQRBlockButton.isEnabled = true
-            ShuffleButton.image = UIImage(systemName: "shuffle")
-            tableView.rowHeight = screenSize.width + QRBlockSizeWithoutQRCode
-        }
-        
-        tableView.reloadData()
-    }
-    
-    //MARK: - Link to my website
-    @IBAction func linkToMilesWebsitePressed(_ sender: UIButton) {
-        if let url = URL(string: "https://milesau.com"){
-            UIApplication.shared.open(url)
-        }
-
-    }
-    
-}
-
-extension QRListViewController: DismissAddQRViewControllerDelegate{
-    func dismissed() {
-        QRBlockArray = QRBlock.getOldQRBlocks()
-        tableView.reloadData()
-    }
-    
-}
-
-extension QRListViewController: TableViewReorderDelegate {
-    func tableView(_ tableView: UITableView, canReorderRowAt indexPath: IndexPath) -> Bool {
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
         return isShuffling
     }
-    func tableView(_ tableView: UITableView, reorderRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-    }
-    func tableViewDidBeginReordering(_ tableView: UITableView, at indexPath: IndexPath) {
-    }
     
-    func tableViewDidFinishReordering(_ tableView: UITableView, from initialSourceIndexPath: IndexPath, to finalDestinationIndexPath: IndexPath) {
-        let initialPosition = initialSourceIndexPath[1]
-        let destinationPosition = finalDestinationIndexPath[1]
-        let travellingBlock = QRBlockArray.remove(at: initialPosition)
-        QRBlockArray.insert(travellingBlock, at: destinationPosition)
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let travellingBlock = QRBlockArray.remove(at: sourceIndexPath.row)
+        QRBlockArray.insert(travellingBlock, at: destinationIndexPath.row)
         QRBlock.writeNewQRBlocks(with: QRBlockArray)
     }
+
+    @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+        switch(gesture.state) {
+        case .began:
+            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
+                break
+            }
+            collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case .changed:
+            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+        case .ended:
+            collectionView.endInteractiveMovement()
+        default:
+            collectionView.cancelInteractiveMovement()
+        }
+    }
+    
+    func setupCells(){
+        if screenSize.width < 700{ // width suggests mobile screen
+            qrSquareSize = UIScreen.main.bounds.size.width - 20.0
+        } else if screenSize.width < 1000 { // width suggests smaller iPad screen
+            qrSquareSize = UIScreen.main.bounds.size.width / 2 - 20.0
+        } else if screenSize.width < 1200 { // width suggests larger iPad screen in portrait
+            qrSquareSize = UIScreen.main.bounds.size.width / 3 - 20.0
+        } else { // width suggests larger iPad screen in landscape
+            qrSquareSize = UIScreen.main.bounds.size.width / 4 - 20.0
+        }
+    }
+    
+    func layoutCells() {
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
+        layout.minimumInteritemSpacing = 5.0
+        layout.minimumLineSpacing = 5.0
+        layout.itemSize = CGSize(width: qrSquareSize, height: qrSquareSize + 100.0)
+        collectionView!.collectionViewLayout = layout
+    }
 }
+

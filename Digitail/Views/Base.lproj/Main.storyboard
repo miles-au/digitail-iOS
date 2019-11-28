@@ -25,23 +25,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aJz-4A-v81">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h4L-ko-poB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="488"/>
                                 <color key="backgroundColor" name="BrandBlue"/>
-                                <color key="sectionIndexBackgroundColor" name="BrandLightGrey"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QRBlockViewCell" id="xGW-Nz-9x9" customClass="QRBlockViewCell" customModule="Digitail" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGW-Nz-9x9" id="rFQ-XD-zFA">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KzS-O1-ASH">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZYM-rr-55W">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="g7h-gF-Vi3">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvV-EQ-G7p">
-                                <rect key="frame" x="54" y="482" width="212" height="37"/>
+                                <rect key="frame" x="0.0" y="488" width="320" height="36"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="20"/>
                                 <state key="normal" title="Made in 🇨🇦 by Miles Au"/>
                                 <connections>
@@ -51,12 +56,13 @@
                         </subviews>
                         <color key="backgroundColor" name="BrandBlue"/>
                         <constraints>
-                            <constraint firstItem="dgp-ea-lgL" firstAttribute="bottom" secondItem="kvV-EQ-G7p" secondAttribute="bottom" constant="5" id="Ge0-y0-wNf"/>
-                            <constraint firstItem="aJz-4A-v81" firstAttribute="leading" secondItem="dgp-ea-lgL" secondAttribute="leading" id="Zsl-iA-8O4"/>
-                            <constraint firstItem="aJz-4A-v81" firstAttribute="trailing" secondItem="dgp-ea-lgL" secondAttribute="trailing" id="dcV-dj-ReN"/>
-                            <constraint firstItem="aJz-4A-v81" firstAttribute="top" secondItem="dgp-ea-lgL" secondAttribute="top" id="qDw-FV-0sk"/>
-                            <constraint firstItem="kvV-EQ-G7p" firstAttribute="centerX" secondItem="l74-QK-fob" secondAttribute="centerX" id="ujk-QY-Dty"/>
-                            <constraint firstItem="dgp-ea-lgL" firstAttribute="bottom" secondItem="aJz-4A-v81" secondAttribute="bottom" constant="50" id="zii-CO-7eE"/>
+                            <constraint firstItem="h4L-ko-poB" firstAttribute="top" secondItem="dgp-ea-lgL" secondAttribute="top" id="5Ew-Fk-MaB"/>
+                            <constraint firstItem="dgp-ea-lgL" firstAttribute="trailing" secondItem="h4L-ko-poB" secondAttribute="trailing" id="DqR-DK-NN6"/>
+                            <constraint firstItem="kvV-EQ-G7p" firstAttribute="leading" secondItem="dgp-ea-lgL" secondAttribute="leading" id="MdH-4A-mm3"/>
+                            <constraint firstItem="h4L-ko-poB" firstAttribute="leading" secondItem="dgp-ea-lgL" secondAttribute="leading" id="Vzk-Ym-st1"/>
+                            <constraint firstItem="kvV-EQ-G7p" firstAttribute="trailing" secondItem="dgp-ea-lgL" secondAttribute="trailing" id="Z1r-py-v0t"/>
+                            <constraint firstItem="kvV-EQ-G7p" firstAttribute="top" secondItem="h4L-ko-poB" secondAttribute="bottom" id="dfF-aq-Zmq"/>
+                            <constraint firstItem="dgp-ea-lgL" firstAttribute="bottom" secondItem="kvV-EQ-G7p" secondAttribute="bottom" id="okM-o3-4kG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dgp-ea-lgL"/>
                     </view>
@@ -77,7 +83,7 @@
                     <connections>
                         <outlet property="ShuffleButton" destination="LjY-kP-c8f" id="8Yq-aR-Hxb"/>
                         <outlet property="addQRBlockButton" destination="RBW-wT-dXK" id="5eF-Pf-CQy"/>
-                        <outlet property="tableView" destination="aJz-4A-v81" id="ogY-xG-CTv"/>
+                        <outlet property="collectionView" destination="h4L-ko-poB" id="geZ-3C-NiX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIA-qN-QG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,13 +99,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platform:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zk7-Ib-lNz">
-                                <rect key="frame" x="10" y="10" width="125.5" height="37.5"/>
+                                <rect key="frame" x="10" y="10" width="122" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-fi-dQl">
-                                <rect key="frame" x="0.0" y="57.5" width="320" height="175"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="175"/>
                                 <color key="backgroundColor" name="BrandLightBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="JBc-3L-HbK"/>
@@ -122,13 +128,13 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target/URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulx-16-vSb">
-                                <rect key="frame" x="10" y="242.5" width="168" height="37.5"/>
+                                <rect key="frame" x="10" y="240" width="159.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-J9-6rx">
-                                <rect key="frame" x="10" y="290" width="300" height="40"/>
+                                <rect key="frame" x="10" y="285" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dOt-hv-ZHm"/>
                                 </constraints>
@@ -139,7 +145,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-oa-H0e">
-                                <rect key="frame" x="10" y="340" width="300" height="50"/>
+                                <rect key="frame" x="10" y="335" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h9f-CE-cXw"/>
@@ -216,9 +222,6 @@
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.27500000596046448" green="0.3449999988079071" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BrandLightGrey">
-            <color red="0.78799998760223389" green="0.81999999284744263" blue="0.82700002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
