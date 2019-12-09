@@ -25,14 +25,14 @@
 		07CC97432378FA760057D2E5 /* QRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CC97422378FA750057D2E5 /* QRBlock.swift */; };
 		07FBEF65238E2538003C2C1B /* QRBlockViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FBEF63238E2538003C2C1B /* QRBlockViewCell.swift */; };
 		07FBEF66238E2538003C2C1B /* QRBlockViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07FBEF64238E2538003C2C1B /* QRBlockViewCell.xib */; };
-		C026EE811402E8C578818066 /* Pods_Digitail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */; };
+		83E70DD3313B17236982D14E /* Pods_Digitails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F24E530C139FDECF232E970 /* Pods_Digitails.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07A38434237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQRPlatformIconsCollectionViewCell.swift; sourceTree = "<group>"; };
 		07A38435237BB23D0081A85E /* NewQRPlatformIconsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewQRPlatformIconsCollectionViewCell.xib; sourceTree = "<group>"; };
 		07A38438237BB2990081A85E /* NewQRPlatformIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQRPlatformIcon.swift; sourceTree = "<group>"; };
-		07CC97092378A2CD0057D2E5 /* Digitail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CC97092378A2CD0057D2E5 /* Digitails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CC970C2378A2CD0057D2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07CC970E2378A2CD0057D2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		07CC97132378A2CD0057D2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,9 +49,9 @@
 		07CC97422378FA750057D2E5 /* QRBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRBlock.swift; sourceTree = "<group>"; };
 		07FBEF63238E2538003C2C1B /* QRBlockViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRBlockViewCell.swift; sourceTree = "<group>"; };
 		07FBEF64238E2538003C2C1B /* QRBlockViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRBlockViewCell.xib; sourceTree = "<group>"; };
-		B23641D35F0722C25C6F7D98 /* Pods-Digitail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitail.release.xcconfig"; path = "Target Support Files/Pods-Digitail/Pods-Digitail.release.xcconfig"; sourceTree = "<group>"; };
-		C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digitail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F881043A12A90097F08AE844 /* Pods-Digitail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitail.debug.xcconfig"; path = "Target Support Files/Pods-Digitail/Pods-Digitail.debug.xcconfig"; sourceTree = "<group>"; };
+		0F24E530C139FDECF232E970 /* Pods_Digitails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digitails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B167EAD6C291B552A8E2B6DD /* Pods-Digitails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitails.debug.xcconfig"; path = "Target Support Files/Pods-Digitails/Pods-Digitails.debug.xcconfig"; sourceTree = "<group>"; };
+		B22518E85F8D57575E2B5B62 /* Pods-Digitails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digitails.release.xcconfig"; path = "Target Support Files/Pods-Digitails/Pods-Digitails.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C026EE811402E8C578818066 /* Pods_Digitail.framework in Frameworks */,
+				83E70DD3313B17236982D14E /* Pods_Digitails.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,22 +69,22 @@
 		07CC97002378A2CC0057D2E5 = {
 			isa = PBXGroup;
 			children = (
-				07CC970B2378A2CD0057D2E5 /* Digitail */,
+				07CC970B2378A2CD0057D2E5 /* Digitails */,
 				07CC970A2378A2CD0057D2E5 /* Products */,
 				5F60C78FAB9A0F4FB317F016 /* Pods */,
-				7B9EB66CB20256C4FFDA1705 /* Frameworks */,
+				FA2BA77C0C9B6E5376595768 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		07CC970A2378A2CD0057D2E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07CC97092378A2CD0057D2E5 /* Digitail.app */,
+				07CC97092378A2CD0057D2E5 /* Digitails.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07CC970B2378A2CD0057D2E5 /* Digitail */ = {
+		07CC970B2378A2CD0057D2E5 /* Digitails */ = {
 			isa = PBXGroup;
 			children = (
 				07CC97332378B0250057D2E5 /* Models */,
@@ -97,7 +97,7 @@
 				07CC971A2378A2D10057D2E5 /* Info.plist */,
 				07CC97252378AC580057D2E5 /* Fonts */,
 			);
-			path = Digitail;
+			path = Digitails;
 			sourceTree = "<group>";
 		};
 		07CC97222378A7DD0057D2E5 /* Controllers */ = {
@@ -145,16 +145,16 @@
 		5F60C78FAB9A0F4FB317F016 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F881043A12A90097F08AE844 /* Pods-Digitail.debug.xcconfig */,
-				B23641D35F0722C25C6F7D98 /* Pods-Digitail.release.xcconfig */,
+				B167EAD6C291B552A8E2B6DD /* Pods-Digitails.debug.xcconfig */,
+				B22518E85F8D57575E2B5B62 /* Pods-Digitails.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		7B9EB66CB20256C4FFDA1705 /* Frameworks */ = {
+		FA2BA77C0C9B6E5376595768 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C8D684B7BA1ACCA8EE2D8E0E /* Pods_Digitail.framework */,
+				0F24E530C139FDECF232E970 /* Pods_Digitails.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,23 +162,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07CC97082378A2CD0057D2E5 /* Digitail */ = {
+		07CC97082378A2CD0057D2E5 /* Digitails */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07CC971D2378A2D10057D2E5 /* Build configuration list for PBXNativeTarget "Digitail" */;
+			buildConfigurationList = 07CC971D2378A2D10057D2E5 /* Build configuration list for PBXNativeTarget "Digitails" */;
 			buildPhases = (
-				8D7DC435FC41C50A3B04054D /* [CP] Check Pods Manifest.lock */,
+				DA592DD32E721DA693541970 /* [CP] Check Pods Manifest.lock */,
 				07CC97052378A2CD0057D2E5 /* Sources */,
 				07CC97062378A2CD0057D2E5 /* Frameworks */,
 				07CC97072378A2CD0057D2E5 /* Resources */,
-				21C43C0CB514B034BDC33052 /* [CP] Embed Pods Frameworks */,
+				990610C0ADFEAA37DE4BDB68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Digitail;
+			name = Digitails;
 			productName = Digitail;
-			productReference = 07CC97092378A2CD0057D2E5 /* Digitail.app */;
+			productReference = 07CC97092378A2CD0057D2E5 /* Digitails.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07CC97042378A2CC0057D2E5 /* Build configuration list for PBXProject "Digitail" */;
+			buildConfigurationList = 07CC97042378A2CC0057D2E5 /* Build configuration list for PBXProject "Digitails" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -209,7 +209,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07CC97082378A2CD0057D2E5 /* Digitail */,
+				07CC97082378A2CD0057D2E5 /* Digitails */,
 			);
 		};
 /* End PBXProject section */
@@ -235,24 +235,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21C43C0CB514B034BDC33052 /* [CP] Embed Pods Frameworks */ = {
+		990610C0ADFEAA37DE4BDB68 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Digitail/Pods-Digitail-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Digitails/Pods-Digitails-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Digitail/Pods-Digitail-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Digitails/Pods-Digitails-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Digitail/Pods-Digitail-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Digitails/Pods-Digitails-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D7DC435FC41C50A3B04054D /* [CP] Check Pods Manifest.lock */ = {
+		DA592DD32E721DA693541970 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,7 +267,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Digitail-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Digitails-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -430,12 +430,12 @@
 		};
 		07CC971E2378A2D10057D2E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F881043A12A90097F08AE844 /* Pods-Digitail.debug.xcconfig */;
+			baseConfigurationReference = B167EAD6C291B552A8E2B6DD /* Pods-Digitails.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X24VA92QA;
-				INFOPLIST_FILE = Digitail/Info.plist;
+				INFOPLIST_FILE = Digitails/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,12 +449,12 @@
 		};
 		07CC971F2378A2D10057D2E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B23641D35F0722C25C6F7D98 /* Pods-Digitail.release.xcconfig */;
+			baseConfigurationReference = B22518E85F8D57575E2B5B62 /* Pods-Digitails.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X24VA92QA;
-				INFOPLIST_FILE = Digitail/Info.plist;
+				INFOPLIST_FILE = Digitails/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07CC97042378A2CC0057D2E5 /* Build configuration list for PBXProject "Digitail" */ = {
+		07CC97042378A2CC0057D2E5 /* Build configuration list for PBXProject "Digitails" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07CC971B2378A2D10057D2E5 /* Debug */,
@@ -478,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07CC971D2378A2D10057D2E5 /* Build configuration list for PBXNativeTarget "Digitail" */ = {
+		07CC971D2378A2D10057D2E5 /* Build configuration list for PBXNativeTarget "Digitails" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07CC971E2378A2D10057D2E5 /* Debug */,

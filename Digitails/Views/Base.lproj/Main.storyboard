@@ -12,15 +12,12 @@
         <array key="Quicksand-Regular.ttf">
             <string>Quicksand-Regular</string>
         </array>
-        <array key="Quicksand-SemiBold.ttf">
-            <string>Quicksand-SemiBold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Digitails-->
         <scene sceneID="K1z-ro-v9O">
             <objects>
-                <viewController id="JgT-Fy-F42" customClass="QRListViewController" customModule="Digitail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JgT-Fy-F42" customClass="QRListViewController" customModule="Digitails" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l74-QK-fob">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +90,7 @@
         <!--Add Link-->
         <scene sceneID="Wxm-dY-wm5">
             <objects>
-                <viewController id="bjp-QA-Fco" customClass="AddQRViewController" customModule="Digitail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bjp-QA-Fco" customClass="AddQRViewController" customModule="Digitails" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3XL-4Z-bkR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,20 +141,6 @@
                                     <action selector="NewQRTextFieldPrimaryActionPressed:" destination="bjp-QA-Fco" eventType="primaryActionTriggered" id="ucV-QO-Bd8"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-oa-H0e">
-                                <rect key="frame" x="10" y="335" width="300" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="h9f-CE-cXw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="30"/>
-                                <state key="normal" title="Add QR Code">
-                                    <color key="titleColor" name="BrandBlue"/>
-                                </state>
-                                <connections>
-                                    <action selector="AddQRPressed:" destination="bjp-QA-Fco" eventType="touchUpInside" id="ImA-ta-mpI"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="BrandLightBlue"/>
                         <constraints>
@@ -165,19 +148,24 @@
                             <constraint firstItem="8xb-J9-6rx" firstAttribute="width" secondItem="8PL-fi-dQl" secondAttribute="width" constant="-20" id="Ftg-xU-RKE"/>
                             <constraint firstItem="8PL-fi-dQl" firstAttribute="top" secondItem="zk7-Ib-lNz" secondAttribute="bottom" constant="10" id="L1e-wa-MIF"/>
                             <constraint firstItem="zk7-Ib-lNz" firstAttribute="top" secondItem="Sq4-d9-QMO" secondAttribute="top" constant="10" id="Tqz-77-90K"/>
-                            <constraint firstItem="Oyp-oa-H0e" firstAttribute="top" secondItem="8xb-J9-6rx" secondAttribute="bottom" constant="10" id="XCX-Zy-ZBO"/>
                             <constraint firstItem="8PL-fi-dQl" firstAttribute="leading" secondItem="3XL-4Z-bkR" secondAttribute="leading" id="XRl-Nf-C9k"/>
                             <constraint firstItem="8xb-J9-6rx" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="YvC-5K-Vnb"/>
                             <constraint firstItem="Ulx-16-vSb" firstAttribute="top" secondItem="8PL-fi-dQl" secondAttribute="bottom" constant="10" id="a3E-Vu-xtj"/>
                             <constraint firstItem="Ulx-16-vSb" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="dFS-dM-Lwg"/>
                             <constraint firstItem="zk7-Ib-lNz" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="jdg-Bv-LbQ"/>
                             <constraint firstItem="8PL-fi-dQl" firstAttribute="width" secondItem="Sq4-d9-QMO" secondAttribute="width" id="oll-it-Neu"/>
-                            <constraint firstItem="Oyp-oa-H0e" firstAttribute="width" secondItem="8xb-J9-6rx" secondAttribute="width" id="pBv-ye-aG1"/>
-                            <constraint firstItem="Oyp-oa-H0e" firstAttribute="leading" secondItem="Sq4-d9-QMO" secondAttribute="leading" constant="10" id="tR8-iy-8F0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sq4-d9-QMO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Link" id="PEO-Sj-6gq"/>
+                    <navigationItem key="navigationItem" title="Add Link" id="PEO-Sj-6gq">
+                        <barButtonItem key="backBarButtonItem" title="cancel" id="MzR-qZ-69m"/>
+                        <barButtonItem key="rightBarButtonItem" image="checkmark" catalog="system" style="plain" id="eXY-xm-fjs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="AddQRPressed:" destination="bjp-QA-Fco" id="YXh-HT-nsI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="NewQRUrlTextField" destination="8xb-J9-6rx" id="8mJ-eS-9e7"/>
                         <outlet property="NewQRUrlTextFieldLabelView" destination="Ulx-16-vSb" id="02m-RC-dfl"/>
@@ -216,6 +204,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark" catalog="system" width="64" height="56"/>
         <image name="shuffle" catalog="system" width="64" height="46"/>
         <namedColor name="BrandBlue">
             <color red="0.10599999874830246" green="0.16500000655651093" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -34,7 +34,7 @@ class AddQRViewController: UIViewController, UIScrollViewDelegate{
         collectionView.reloadData()
     }
     
-    @IBAction func AddQRPressed(_ sender: UIButton) {
+    @IBAction func AddQRPressed(_ sender: UIBarButtonItem) {
         var target = NewQRUrlTextField.text!
         if target.count > 0 , let platform = finalPlatform{
             // validate URL

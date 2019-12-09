@@ -50,7 +50,7 @@ class QRListViewController: UIViewController {
             
             // navigation bar styling
             let backItem = UIBarButtonItem()
-            backItem.title = "Cancel"
+            backItem.image = UIImage(systemName: "xmark")
             navigationItem.backBarButtonItem = backItem
         }
     }
@@ -166,9 +166,9 @@ extension QRListViewController: UICollectionViewDataSource, UICollectionViewDele
     func setupCells(){
         if screenSize.width < 700{ // width suggests mobile screen
             qrSquareSize = UIScreen.main.bounds.size.width - 20.0
-        } else if screenSize.width < 1000 { // width suggests smaller iPad screen
+        } else if screenSize.width < 800 { // width suggests smaller iPad screen
             qrSquareSize = UIScreen.main.bounds.size.width / 2 - 20.0
-        } else if screenSize.width < 1200 { // width suggests larger iPad screen in portrait
+        } else if screenSize.width < 1100 { // width suggests larger iPad screen in portrait
             qrSquareSize = UIScreen.main.bounds.size.width / 3 - 20.0
         } else { // width suggests larger iPad screen in landscape
             qrSquareSize = UIScreen.main.bounds.size.width / 4 - 20.0
